@@ -29,7 +29,7 @@ class LoginPage extends ConsumerWidget {
               obscureText: true,
               decoration: InputDecoration(labelText: 'Password'),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 final email = emailController.text;
