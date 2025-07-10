@@ -4,13 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# the reference i took to complete the login screen 
 
-A few resources to get you started if this is your first Flutter project:
+i have read the riverpod statenotifier provider from the official riverpod site and https://pub.dev/documentation/hooks_riverpod/3.0.0-dev.16/legacy/StateNotifierProvider-class.html
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+i have an experience doing login page form the previous company i previously  work and the project called  Expand where i use the riverpod for statemanagement in my git hub this is the link :  https://github.com/AaditAntony/expand/branches
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+there is a problem with the ndk version with the sharedpreference i solve it using the debug and the appropriate version in the app inside android folder  build-gradle.kts file and that proble has been solved
+
+for the reference i have used chat GPT and tech brother which is youtube channel  for the  reference of riverpod and login state
