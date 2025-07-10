@@ -4,13 +4,33 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# the reference i took to complete the login screen 
 
-A few resources to get you started if this is your first Flutter project:
+i have used mvvm architecture and riverpod for the stamanagemnt as this option is best for the clear seperation of code of business logic form the ui
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+i have read the riverpod statenotifier provider from the official riverpod site and https://pub.dev/documentation/hooks_riverpod/3.0.0-dev.16/legacy/StateNotifierProvider-class.html
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+i have an experience doing login page form the previous company i previously  work and the project called  Expand where i use the riverpod for statemanagement in my git hub this is the link : 
+ https://github.com/AaditAntony/expand/branches
+
+there is a problem with the ndk version with the sharedpreference i solve it using the debug and the appropriate version in the app inside android folder  build-gradle.kts file and that proble has been solved
+
+for the reference i have used chat GPT and tech brother which is youtube channel  for the  reference and correction of riverpod and login state
+
+# Key Features of the login page
+
+MVVM Architecture for clear separation of business logic and UI
+Riverpod for state management (using StateNotifierProvider)
+SharedPreferences for local storage
+
+
+# Implementation Details
+
+Followed Riverpod's official documentation and best practices
+Solved NDK version conflict with SharedPreferences by updating build-gradle.kts
+Built upon previous experience from Expand project
+References
+
+Riverpod Documentation
+Tech Brothers YouTube channel
+ChatGPT for code references and corrections
