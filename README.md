@@ -96,3 +96,28 @@ i have used the shared preferece document and chatgpt for the dough clearence re
 if there is a socket excception error related to it it will move to the error screen
  refered using 
 in stackoverflow , medium.
+
+# Future upgrade 
+
+need to do animation
+improve the ui ... etc
+
+if there is any more improvement in the code let
+
+# conclusion
+
+i have done the proejct as per the instruction 
+
+Card Number: 4111 1111 1111 1111
+Expiry: Any future date (like 12/26)
+CVV: 123
+Name: any name
+
+this is the card number i have used for the testing and successfully intergrated the payment gate using razor pay
+
+
+
+I'm open to any suggestions or improvements you may have. Please feel free to share your feedback before I proceed with the submission.
+
+
+
