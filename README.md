@@ -90,3 +90,7 @@ the search history has been implemented using order view model ,order nodel and 
 # referece of the search history 
 
 i have used the shared preferece document and chatgpt for the dough clearence regarding the management
+
+# manage the error in product list screen
+
+if there is a socket excception error related to it it will move to the error screen

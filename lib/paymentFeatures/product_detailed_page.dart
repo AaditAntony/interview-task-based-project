@@ -126,7 +126,7 @@ class _ProductDetailedPageState extends ConsumerState<ProductDetailedPage> {
             SizedBox(height: 30),
             Center(
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(minimumSize: Size(100, 60)),
+                style: ElevatedButton.styleFrom(minimumSize: Size(200, 60)),
                 onPressed: _startPayment,
                 child: Text("Buy Now"),
               ),
