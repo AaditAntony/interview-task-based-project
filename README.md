@@ -47,3 +47,21 @@ i have used my own git hubs previous project  called expand where i tried to imp
 
 since the api is already displayed in the ui i only need to pass the model to the product detailed screen. and it has been done successfully and implemented the product details in the screen
 
+# key features of displayig the Payment gate in Product Detailed Screen
+after creating the product page i have implemented the payment gate in the product detailed screen
+
+it consist of error handling
+attacheed event listner for handling payment success
+attacheed event listner for handling payment error
+attacheed event listner for handling payment external wallet
+
+notifies the listner if the payment is success of failure there will be an attached snackbar with the message 
+
+# reference i have used
+
+read this documentation of the official RazorPay through this link : https://razorpay.com/docs/payments/payment-gateway/flutter-integration/standard/build-integration/#11-install-razorpay-flutter-plugin
+
+watched the youtube videos of the razor pay integration :https://www.youtube.com/watch?v=pakLL37M6KI
+
+i have reffered chatgpt for the integration error for the creation of proguard-rules.pro and add dependency in the build.gradle.kts etc...
+
