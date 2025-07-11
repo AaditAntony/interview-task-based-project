@@ -22,10 +22,12 @@ class LoginPage extends ConsumerWidget {
             children: [
               SizedBox(height: 40),
               Icon(Icons.lock, size: 200),
+              SizedBox(height: 70),
               TextField(
                 controller: emailController,
                 decoration: InputDecoration(labelText: 'Email'),
               ),
+
               SizedBox(height: 30),
               TextField(
                 controller: passwordController,
@@ -34,6 +36,7 @@ class LoginPage extends ConsumerWidget {
               ),
               SizedBox(height: 40),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(minimumSize: Size(200, 60)),
                 onPressed: () {
                   final email = emailController.text;
                   final password = passwordController.text;

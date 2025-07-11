@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:trends/product_list_page.dart';
 
 import 'login_page.dart';
 
@@ -11,12 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Login App',
       home: LoginPage(),
-      routes: {
-        '/productList': (context) =>
-            Scaffold(body: Center(child: Text('Product List Page'))),
-      },
+      routes: {'/productList': (context) => const ProductListPage()},
     );
   }
 }
