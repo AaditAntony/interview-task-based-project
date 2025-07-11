@@ -15,6 +15,8 @@ https://github.com/AaditAntony/expand/tree/main/lib/features/auth
 
 there is a problem with the ndk version with the sharedpreference i solve it using the debug and the appropriate version in the app inside android folder  build-gradle.kts file and that proble has been solved
 
+onece the token is stored in the local storage there is no need for relogin unless the app in uninstalled
+
 for the reference i have used chat GPT and tech brother which is youtube channel  for the  reference and correction of riverpod and login state
 
 # Key Features of the login page
@@ -22,6 +24,7 @@ for the reference i have used chat GPT and tech brother which is youtube channel
 MVVM Architecture for clear separation of business logic and UI
 Riverpod for state management (using StateNotifierProvider)
 SharedPreferences for local storage
+when entering in the app there is no need of login everytime
 
 
 # Implementation Details
