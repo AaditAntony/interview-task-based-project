@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:trends/order_success_page.dart';
+import 'package:trends/payment_failure_page.dart';
 import 'product_model.dart';
 
 class ProductDetailedPage extends StatefulWidget {
@@ -44,6 +45,15 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
   void _handleError(PaymentFailureResponse response) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text("Payment Failed! Reason: ${response.message}")),
+    );
+    // i have implemented the payment failure if the payment goes wrong
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PaymentFailurePage(
+          reason: response.message ?? "Unknown error occurred",
+        ),
+      ),
     );
   }
 
