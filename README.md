@@ -108,7 +108,7 @@ if there is any more improvement in the code let
 
 i have done the proejct as per the instruction 
 
-Card Number: 4111 1111 1111 1111
+Card Number: 4111 1111 1111 1111         <---- this is the only valid card number for the test payment gate
 Expiry: Any future date (like 12/26)
 CVV: 123
 Name: any name
