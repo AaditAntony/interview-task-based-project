@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:trends/product_list_page.dart';
+import 'package:trends/splash_page.dart';
 
 import 'login_page.dart';
 
@@ -14,8 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Login App',
-      home: LoginPage(),
-      routes: {'/productList': (context) => const ProductListPage()},
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashPage(),
+        '/login': (context) => LoginPage(),
+        '/productList': (context) => ProductListPage(),
+      },
     );
   }
 }
