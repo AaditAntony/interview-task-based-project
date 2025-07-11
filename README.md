@@ -95,4 +95,4 @@ i have used the shared preferece document and chatgpt for the dough clearence re
 
 if there is a socket excception error related to it it will move to the error screen
  refered using 
-in stackoverflow , medium .
+in stackoverflow , medium.
