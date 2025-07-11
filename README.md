@@ -65,3 +65,9 @@ watched the youtube videos of the razor pay integration :https://www.youtube.com
 
 i have reffered chatgpt for the integration error for the creation of proguard-rules.pro and add dependency in the build.gradle.kts etc...
 
+Card Number: 4111 1111 1111 1111
+Expiry: Any future date (like 12/26)
+CVV: 123
+Name: Acdg
+
+this is the card name i have used
