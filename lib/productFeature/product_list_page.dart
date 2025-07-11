@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trends/order_history_page.dart';
-import 'package:trends/product_detailed_page.dart';
+import 'package:trends/orderHistory/order_history_page.dart';
+import 'package:trends/paymentFeatures/product_detailed_page.dart';
 import 'product_view_model.dart';
 import 'product_model.dart';
 

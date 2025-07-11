@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trends/order_view_model.dart';
+import 'package:trends/orderHistory/order_view_model.dart';
 
 class OrderHistoryPage extends ConsumerWidget {
   const OrderHistoryPage({super.key});
