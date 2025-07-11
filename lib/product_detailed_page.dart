@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:trends/order_success_page.dart';
 import 'product_model.dart';
 
 class ProductDetailedPage extends StatefulWidget {
@@ -27,6 +28,16 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
   void _handleSuccess(PaymentSuccessResponse response) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text("Payment Successful! ID: ${response.paymentId}")),
+    );
+    //i have implemented moving to the order success page if the payment processed correctly
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (_) => OrderSuccessPage(
+          productName: widget.product.title,
+          price: widget.product.price,
+        ),
+      ),
     );
   }
 

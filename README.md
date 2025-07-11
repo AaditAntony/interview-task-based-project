@@ -74,3 +74,7 @@ CVV: 123
 Name: Acdg
 
 this is the card name i have used
+
+# order success page
+order success page has been implemented in the product detailed screen where the
+payment handled success method now return  the order success page if the oreder is confirmed
