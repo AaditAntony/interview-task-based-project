@@ -83,3 +83,10 @@ payment handled success method now return  the order success page if the oreder 
 
 if the payment failed in any case this this will direct to the payment failure screen this is
 implemented in the product detailed screen .
+
+# search history
+the search history has been implemented using order view model ,order nodel and order history page and called the logic in product detailed page where the payment gate is added inside it called in the success handler and navigation is to the order history page is provided in the product listpage inside floating action bar
+
+# referece of the search history 
+
+i have used the shared preferece document and chatgpt for the dough clearence regarding the management
