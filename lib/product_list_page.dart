@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:trends/product_detailed_page.dart';
 import 'product_view_model.dart';
 import 'product_model.dart';
 
@@ -26,6 +27,14 @@ class ProductListPage extends ConsumerWidget {
                   leading: Image.network(product.image, height: 50, width: 50),
                   title: Text(product.title),
                   subtitle: Text("₹${product.price.toStringAsFixed(2)}"),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => ProductDetailedPage(product: product),
+                      ),
+                    );
+                  },
                 ),
               );
             },

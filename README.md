@@ -41,3 +41,9 @@ i have performed this api using riverpod and mvvm architecture
 
 # reference of this implementaion
 i have used my own git hubs previous project  called expand where i tried to implement the this type of api in form the site called : https://dummyjson.com/products. and this is the projects link  : https://github.com/AaditAntony/expand/tree/main/lib/features/Product
+
+
+# key features of displayig the Product Detailed Screen
+
+since the api is already displayed in the ui i only need to pass the model to the product detailed screen. and it has been done successfully and implemented the product details in the screen
+
