@@ -20,8 +20,10 @@ class _SplashPageState extends State<SplashPage> {
     final token = prefs.getString('auth_token');
 
     if (token != null && token.isNotEmpty) {
+      // ignore: use_build_context_synchronously
       Navigator.pushReplacementNamed(context, '/productList');
     } else {
+      // ignore: use_build_context_synchronously
       Navigator.pushReplacementNamed(context, '/login');
     }
   }

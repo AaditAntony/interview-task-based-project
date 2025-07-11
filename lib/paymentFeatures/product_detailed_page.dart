@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-import 'package:trends/order_model.dart';
-import 'package:trends/order_success_page.dart';
-import 'package:trends/order_view_model.dart';
-import 'package:trends/payment_failure_page.dart';
-import 'product_model.dart';
+import 'package:trends/orderHistory/order_model.dart';
+import 'package:trends/paymentFeatures/order_success_page.dart';
+import 'package:trends/orderHistory/order_view_model.dart';
+import 'package:trends/paymentFeatures/payment_failure_page.dart';
+import '../productFeature/product_model.dart';
 
 class ProductDetailedPage extends ConsumerStatefulWidget {
   final Product product;
@@ -40,11 +40,12 @@ class _ProductDetailedPageState extends ConsumerState<ProductDetailedPage> {
           ),
         );
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Payment Successful! ID: ${response.paymentId}")),
-    );
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //   SnackBar(content: Text("Payment Successful! ID: ${response.paymentId}")),
+    // );
 
     Navigator.pushReplacement(
+      // ignore: use_build_context_synchronously
       context,
       MaterialPageRoute(
         builder: (_) => OrderSuccessPage(
