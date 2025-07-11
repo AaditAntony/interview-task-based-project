@@ -11,7 +11,7 @@ i have used mvvm architecture and riverpod for the stamanagemnt as this option i
 i have read the riverpod statenotifier provider from the official riverpod site and https://pub.dev/documentation/hooks_riverpod/3.0.0-dev.16/legacy/StateNotifierProvider-class.html
 
 i have an experience doing login page form the previous company i previously  work and the project called  Expand where i use the riverpod for statemanagement in my git hub this is the link : 
- https://github.com/AaditAntony/expand/branches
+https://github.com/AaditAntony/expand/tree/main/lib/features/auth
 
 there is a problem with the ndk version with the sharedpreference i solve it using the debug and the appropriate version in the app inside android folder  build-gradle.kts file and that proble has been solved
 
@@ -34,3 +34,10 @@ References
 Riverpod Documentation
 Tech Brothers YouTube channel
 ChatGPT for code references and corrections
+
+# key features of the Api Product displaying 
+
+i have performed this api using riverpod and mvvm architecture
+
+# reference of this implementaion
+i have used my own git hubs previous project  called expand where i tried to implement the this type of api in form the site called : https://dummyjson.com/products. and this is the projects link  : https://github.com/AaditAntony/expand/tree/main/lib/features/Product
