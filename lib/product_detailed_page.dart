@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
+import 'package:trends/order_model.dart';
 import 'package:trends/order_success_page.dart';
+import 'package:trends/order_view_model.dart';
 import 'package:trends/payment_failure_page.dart';
 import 'product_model.dart';
 
-class ProductDetailedPage extends StatefulWidget {
+class ProductDetailedPage extends ConsumerStatefulWidget {
   final Product product;
   const ProductDetailedPage({super.key, required this.product});
 
   @override
-  State<ProductDetailedPage> createState() => _ProductDetailPageState();
+  ConsumerState<ProductDetailedPage> createState() =>
+      _ProductDetailedPageState();
 }
 
-class _ProductDetailPageState extends State<ProductDetailedPage> {
+class _ProductDetailedPageState extends ConsumerState<ProductDetailedPage> {
   late Razorpay _razorpay;
 
   @override
@@ -26,11 +30,20 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
     _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, _handleExternalWallet);
   }
 
-  void _handleSuccess(PaymentSuccessResponse response) {
+  void _handleSuccess(PaymentSuccessResponse response) async {
+    await ref
+        .read(orderViewModelProvider.notifier)
+        .saveOrder(
+          OrderModel(
+            productName: widget.product.title,
+            price: widget.product.price,
+          ),
+        );
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text("Payment Successful! ID: ${response.paymentId}")),
     );
-    //i have implemented moving to the order success page if the payment processed correctly
+
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -46,7 +59,7 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text("Payment Failed! Reason: ${response.message}")),
     );
-    // i have implemented the payment failure if the payment goes wrong
+
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -65,8 +78,8 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
 
   void _startPayment() {
     var options = {
-      'key': 'rzp_test_1DP5mmOlF5G5ag', // test key from Razorpay docs
-      'amount': (widget.product.price * 100).toInt(), // convert ₹ to paisa
+      'key': 'rzp_test_1DP5mmOlF5G5ag',
+      'amount': (widget.product.price * 100).toInt(),
       'name': 'Test Shop',
       'description': widget.product.title,
       'prefill': {'contact': '8888888888', 'email': 'test@razorpay.com'},
@@ -81,7 +94,7 @@ class _ProductDetailPageState extends State<ProductDetailedPage> {
 
   @override
   void dispose() {
-    _razorpay.clear(); // clear listeners
+    _razorpay.clear();
     super.dispose();
   }
 
